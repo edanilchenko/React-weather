@@ -30,12 +30,8 @@ section.main .temperature-block{
 }
 
 section.main .temperature-block .icon{
-    padding: 15px;
+    padding: 0 15px;
     align-self: center;
-}
-
-section.main .temperature-block .icon img{
-    width: 50px;
 }
 
 section.main .temperature-block .value .digit{
@@ -73,7 +69,7 @@ section.main .description-block .last-update {
 }
 
 section.main .details-block {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 section.main .details-row {
@@ -82,4 +78,43 @@ section.main .details-row {
 
 section.main .details-item {
     padding: 0 10px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+}
+
+section.days {
+    padding: 15px 0;
+}
+
+section.days .list .item {
+    margin: 10px;
+    width: 200px;
+}
+
+section.days .day {
+    font-size: 16px;
+}
+
+section.days .temperature {
+    
+}
+
+section.days .temperature .max {
+    font-size: 24px;
+}
+
+section.days .temperature .min {
+    font-size: 14px;
+}
+
+section.days .description {
+    font-size: 12px;
+    padding: 10px 0;
 }
