@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <section class="main">
+                <div class="location">Dnipro</div>
+                <div class="temperature-block">
+                    <div class="icon">
+                        <img src="./icons/cloud.svg" alt="">
+                    </div>
+                    <div class="value">
+                        <span class="digit">8</span>
+                        <span class="grad">°</span>
+                    </div>
+                    <div class="units">
+                        <div class="active">C</div>
+                        <div class="unit">F</div>
+                    </div>
+                </div>
+                <div class="description-block">
+                    Облачно
+                    <div class="last-update">Обновлено в 17:51</div>
+                </div>
+                <div class="details-block">
+                    <div class="details-row">
+                        <span class="details-item">По ощущениям -5°</span>
+                        <span class="details-item">Ветер 3 м/с</span>
+                        <span class="details-item">Видимость 5 км</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="details-item">Давление 768,00 мм</span>
+                        <span class="details-item">Влажность 90%</span>
+                        <span class="details-item">Точка росы -2°</span>
+                    </div>
+                </div>
+            </section>
+            <section class="days">
+                
+            </section>
+            <section class="hours">
     
-</body>
+            </section>
+            <section class="details">
+    
+            </section>
+        </div>
+    </body>
 </html>

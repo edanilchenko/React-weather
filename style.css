@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: gray;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.container{
+    margin: 5%;
+}
+
+section.main {
+    text-align: center;
+}
+
+section.main .location{
+    font-size: 32px;
+    margin: 10px;
+}
+
+section.main .temperature-block{
+    line-height: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.main .temperature-block .icon{
+    padding: 15px;
+    align-self: center;
+}
+
+section.main .temperature-block .icon img{
+    width: 50px;
+}
+
+section.main .temperature-block .value .digit{
+    font-size: 100px;
+}
+
+section.main .temperature-block .value .grad{
+    margin-left: -5px;
+    font-size: 65px;
+    vertical-align: top;
+}
+
+section.main .temperature-block .units{
+    padding: 0 10px;
+}
+
+section.main .temperature-block .units .active{
+    font-size: 35px;
+}
+
+section.main .temperature-block .units .unit{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+section.main .description-block {
+    font-size: 28px;
+    margin: 10px;
+}
+
+section.main .description-block .last-update {
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+section.main .details-block {
+    font-size: 10px;
+}
+
+section.main .details-row {
+    padding: 5px 0;
+}
+
+section.main .details-item {
+    padding: 0 10px;
+}
