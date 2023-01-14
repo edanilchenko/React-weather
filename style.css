@@ -82,6 +82,7 @@ section.main .details-item {
 
 .title {
     font-size: 28px;
+    padding: 15px 0;
 }
 
 .list{
@@ -93,17 +94,12 @@ section.days {
     padding: 15px 0;
 }
 
-section.days .list .item {
+section.days .item {
     margin: 10px;
-    width: 200px;
 }
 
 section.days .day {
     font-size: 16px;
-}
-
-section.days .temperature {
-    
 }
 
 section.days .temperature .max {
@@ -114,7 +110,26 @@ section.days .temperature .min {
     font-size: 14px;
 }
 
-section.days .description {
+.description {
     font-size: 12px;
     padding: 10px 0;
+}
+
+section.hours .item {
+    border-top: 1px white solid;
+}
+
+section.hours .item .content {
+    padding: 0 10px;
+    border-bottom: 1px white solid;
+}
+
+section.hours .temperature {
+    font-size: 24px;
+}
+
+section.hours .item .time {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
 }
