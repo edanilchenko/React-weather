@@ -1,6 +1,19 @@
 import React from "react"
+import dateFormat from "dateformat";
 
-function Details() {
+function Details({daily, selected_date}) {
+    const sunrise = dateFormat(
+        Date.parse(
+            daily.sunrise.find(e => new Date(e).getDate() === new Date(selected_date).getDate())
+        ),
+        'HH:MM'
+    );
+    const sunset = dateFormat(
+        Date.parse(
+            daily.sunset.find(e => new Date(e).getDate() === new Date(selected_date).getDate())
+        ),
+        'HH:MM'
+    );
     return (
         <section class="details">
             <div class="title">Подробности</div>
@@ -24,14 +37,14 @@ function Details() {
                         <div class="title">Восход</div>
                         <div class="value">
                             <img src="./icons/sun-up.svg" alt="" class="icon"/>
-                            <span class="time">7:21</span>
+                            <span class="time">{sunrise}</span>
                         </div>
                     </p>
                     <p>
                         <div class="title">Закат</div>
                         <div class="value">
                             <img src="./icons/sun-down.svg" alt="" class="icon"/>
-                            <span class="time">16:22</span>
+                            <span class="time">{sunset}</span>
                         </div>
                     </p>
                 </div>
