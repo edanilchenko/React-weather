@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    padding: 5%;
+    padding: 45px;
     background-color: rgba(0,0,0,.2);
 }
 
@@ -95,10 +95,11 @@ section.main .details-item {
 .list{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.item{
-    width: 100%;
+.item {
+    cursor: default;
 }
 
 section.days {
@@ -106,7 +107,8 @@ section.days {
 }
 
 section.days .item {
-    padding: 10px;  
+    padding: 10px;
+    margin-bottom: 17px;
     border: transparent solid 2px;
 }
 
@@ -199,4 +201,34 @@ section.details .details-blocks .item img.icon{
 
 section.details .details-blocks .item .value .time {
     font-size: 25px;
+}
+
+.alice-carousel__prev-btn, .alice-carousel__next-btn {
+    position: absolute;
+    top: 40%;
+    width: auto;
+    font-size: 25px;
+}
+
+.alice-carousel__prev-btn {
+    left: -40px;
+}
+
+.alice-carousel__next-btn {
+    right: -40px;
+}
+
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    line-height: .9;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.alice-carousel__prev-btn-item:hover, .alice-carousel__next-btn-item:hover {
+    color: inherit;
+    border-color: white;
 }

@@ -4,11 +4,9 @@ import WheatherIcon from "./WheatherIcon";
 import WheatherDesc from "./WheatherDesc";
 
 function Main({current_weather}){
-    const [temp, setTemp] = useState(0);
-
     return (
         <section class="main">
-            <div className="location" onClick={ ()=>setTemp(temp + 2) }>
+            <div className="location">
                 Dnipro
             </div>
             <div className="temperature-block">
@@ -23,7 +21,6 @@ function Main({current_weather}){
                 </div>
                 <div className="units">
                     <div className="active">C</div>
-                    <div className="unit">F</div>
                 </div>
             </div>
             <div className="description-block">

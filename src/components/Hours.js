@@ -3,6 +3,7 @@ import WheatherDesc from "./WheatherDesc";
 import WheatherIcon from "./WheatherIcon";
 
 import AliceCarousel from 'react-alice-carousel';
+import * as responsive from '../responsive.json';
 
 import dateFormat from "dateformat";
 
@@ -12,19 +13,6 @@ function Hours({hourly, selected_date}) {
     ).filter((e) => {
         return new Date(e.time).getDate() === new Date(selected_date).getDate()
     });
-
-    const responsive = {
-        0: { 
-            items: 1
-        },
-        568: { 
-            items: 6
-        },
-        1024: {
-            items: 12, 
-            itemsFit: 'contain'
-        },
-    };
 
     return (
         <section class="hours">

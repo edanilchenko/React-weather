@@ -11,7 +11,7 @@ function Wheather() {
    
     useEffect(() => {
         fetch(
-            'https://api.open-meteo.com/v1/forecast?latitude=48.47&longitude=35.04&hourly=temperature_2m,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&timezone=Europe%2FBerlin'
+            'https://api.open-meteo.com/v1/forecast?latitude=48.47&longitude=35.04&hourly=temperature_2m,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&timezone=Europe%2FBerlin&forecast_days=14'
         ).then((response) => {
             return response.json();
         })
@@ -34,7 +34,6 @@ function Wheather() {
             <Main current_weather={apiData.current_weather} />
             <Days daily={apiData.daily} selected_date={selectedDate} set_date={setDate} />
             <Hours hourly={apiData.hourly} selected_date={selectedDate} />
-            <Details daily={apiData.daily} selected_date={selectedDate} />
         </>
     );
 }
