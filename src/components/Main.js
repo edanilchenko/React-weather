@@ -3,7 +3,14 @@ import React, { useState } from "react"
 import WheatherIcon from "./WheatherIcon";
 import WheatherDesc from "./WheatherDesc";
 
+import { get_direction_by_degrees } from "../functions"
+
+import dateFormat from "dateformat";
+
 function Main({current_weather}){
+    var wind_speed = Math.round(current_weather.windspeed);
+    var wind_direction = get_direction_by_degrees(current_weather.winddirection);
+    var update_time = dateFormat(new Date(current_weather.time), 'HH:MM')
     return (
         <section class="main">
             <div className="location">
@@ -25,20 +32,13 @@ function Main({current_weather}){
             </div>
             <div className="description-block">
                 <WheatherDesc weathercode={current_weather.weathercode} />
-                <div className="last-update">Обновлено в 17:51</div>
+                <div className="last-update">Updated at {update_time}</div>
             </div>
             <div className="details-block">
                 <div className="details-row">
-                    <span className="details-item">По ощущениям -5°</span>
                     <span className="details-item">
-                        Ветер {Math.round(current_weather.windspeed)} м/с
+                        Wind {wind_direction} {wind_speed} m/s
                     </span>
-                    <span className="details-item">Видимость 5 км</span>
-                </div>
-                <div className="details-row">
-                    <span className="details-item">Давление 768,00 мм</span>
-                    <span className="details-item">Влажность 90%</span>
-                    <span className="details-item">Точка росы -2°</span>
                 </div>
             </div>
         </section>
