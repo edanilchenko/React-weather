@@ -16,7 +16,7 @@ function Hours({hourly, selected_date}) {
 
     return (
         <section class="hours">
-            <div class="title">По часам</div>
+            <div class="title">Hourly</div>
             <div class="list">
                 <AliceCarousel mouseTracking responsive={responsive} disableDotsControls="true">
                     { selected_hours.map((e) => (

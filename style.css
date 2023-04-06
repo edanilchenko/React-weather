@@ -9,10 +9,6 @@ body{
     background-color: gray;
     font-family: 'Roboto', sans-serif;
     color: white;
-    background-image: url('wallpapers/cloudly.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .container{

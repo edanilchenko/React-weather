@@ -14,7 +14,7 @@ function Days({daily, selected_date, set_date = f => f}) {
 
     return (
         <section class="days">
-            <div class="title">По дням</div>
+            <div class="title">Daily</div>
             <div class="list">
                 <AliceCarousel mouseTracking responsive={responsive} disableDotsControls="true">
                     {daily.time.map((e, i) => (

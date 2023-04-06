@@ -1,20 +1,10 @@
 import React from "react";
 
+import { get_weather_by_code } from "../functions.js"
+
 function WheatherDesc({weathercode = 0}){
-    var desc = 'Sun';
-    if(weathercode > 86){
-        desc = 'Thunder';
-    } else if(weathercode > 77) {
-        desc = 'Rain';
-    } else if(weathercode > 67) {
-        desc = 'Snow';
-    } else if(weathercode > 57) {
-        desc = 'Rain';
-    } else if(weathercode > 3) {
-        desc = 'Fog';
-    } else if(weathercode > 0) {
-        desc = 'Cloud';
-    }
+    var desc = get_weather_by_code(weathercode);
+    desc = desc[0].toUpperCase() + desc.slice(1);
 
     return (
         <>{desc}</>
