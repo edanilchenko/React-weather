@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+import City from "./City";
 import WheatherIcon from "./WheatherIcon";
 import WheatherDesc from "./WheatherDesc";
 
@@ -13,9 +14,6 @@ function Main({current_weather}){
     var update_time = dateFormat(new Date(current_weather.time), 'HH:MM')
     return (
         <section class="main">
-            <div className="location">
-                Dnipro
-            </div>
             <div className="temperature-block">
                 <div className="icon">
                     <WheatherIcon weathercode={current_weather.weathercode} />

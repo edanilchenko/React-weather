@@ -1,4 +1,5 @@
 @import "node_modules/react-alice-carousel/lib/alice-carousel.css";
+@import 'node_modules/react-select-search/style.css';
 
 *{
     margin: 0;
@@ -20,9 +21,14 @@ section.main {
     text-align: center;
 }
 
-section.main .location{
+.location{
     font-size: 32px;
     margin: 10px;
+}
+
+.location .select-search-container{
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 section.main .temperature-block{
