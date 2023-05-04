@@ -8,7 +8,7 @@ import * as responsive from '../responsive.json';
 import dateFormat from "dateformat";
 
 function Hours({hourly, selected_date}) {
-    var selected_hours = hourly.time.map(
+    const selected_hours = hourly.time.map(
         (time, i) => ({time, i})
     ).filter((e) => {
         return new Date(e.time).getDate() === new Date(selected_date).getDate()

@@ -22,7 +22,28 @@ function Wheather() {
             `?latitude=${latitude}` +
             `&longitude=${longitude}` +
             '&hourly=temperature_2m,weathercode' +
-            '&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset' +
+            `&daily=${[
+                'weathercode',
+                'temperature_2m_max',
+                'temperature_2m_min',
+                'apparent_temperature_max',
+                'apparent_temperature_min',
+                'sunrise',
+                'sunset',
+                'uv_index_max',
+                'uv_index_clear_sky_max',
+                'precipitation_sum',
+                'rain_sum',
+                'showers_sum',
+                'snowfall_sum',
+                'precipitation_hours',
+                'precipitation_probability_max',
+                'windspeed_10m_max',
+                'windgusts_10m_max',
+                'winddirection_10m_dominant',
+                'shortwave_radiation_sum',
+                'et0_fao_evapotranspiration'
+            ].join(',')}` +
             '&current_weather=true' +
             '&timezone=Europe%2FBerlin' +
             '&forecast_days=14'
@@ -51,6 +72,7 @@ function Wheather() {
                 <Main current_weather={apiData.current_weather} />
                 <Days daily={apiData.daily} selected_date={selectedDate} set_date={setDate} />
                 <Hours hourly={apiData.hourly} selected_date={selectedDate} />
+                <Details daily={apiData.daily} selected_date={selectedDate} />
             </div>
         </Parallax>
     );

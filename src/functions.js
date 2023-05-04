@@ -26,3 +26,20 @@ export const get_direction_by_degrees = function(degrees) {
     
     return directions[(degrees % 16)];
 }
+
+export const get_weather_desc = function(weather){
+    switch(weather){
+        case 'snow':
+            return 'It will snow';
+        case 'thunder':
+            return 'Thunderstorms are expected';
+        case 'rain':
+            return 'The weather will be rainy';
+        case 'fog':
+            return 'Fog possible';
+        case 'cloud':
+            return 'The sky will be cloudy';
+        default:
+            return 'It will be sunny';
+    }
+}

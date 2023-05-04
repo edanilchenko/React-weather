@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 
-import City from "./City";
 import WheatherIcon from "./WheatherIcon";
 import WheatherDesc from "./WheatherDesc";
 

@@ -176,6 +176,8 @@ section.hours .item .time {
 section.details .details-blocks .item{
     border-top: 1px white solid;
     margin-right: 15px;
+    width: 30%;
+    min-width: 200px;
 }
 
 section.details .details-blocks .item .title{
@@ -203,6 +205,11 @@ section.details .details-blocks .item img.icon{
 
 section.details .details-blocks .item .value .time {
     font-size: 25px;
+}
+
+section.details .diagrams .donut {
+    height: 100px;
+    width: 100px;
 }
 
 .alice-carousel__prev-btn, .alice-carousel__next-btn {
