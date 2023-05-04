@@ -11,11 +11,17 @@ import { Parallax } from 'react-parallax';
 import City from "./components/City"
 
 function Weather() {
-    const [city, setCity] = useState({name: 'Dnipro', value: '48.47_35.04'});
+    const saved_city = JSON.parse(localStorage.getItem('city'));
+
+    const [city, setCity] = useState(saved_city ? 
+        saved_city : 
+        {name: 'Dnipro', value: '48.47_35.04'}
+    );
     const [apiData, setApiData] = useState('');
     const [selectedDate, setDate] = useState('');
    
     useEffect(() => {
+        localStorage.setItem('city', JSON.stringify(city));
         const [latitude, longitude] = city.value.split('_'); 
         fetch(
             'https://api.open-meteo.com/v1/forecast' +
