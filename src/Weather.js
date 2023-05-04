@@ -65,7 +65,9 @@ function Weather() {
     }, [city]);
 
     if(apiData === ''){
-        return <div>No data</div>
+        return <div className="loading-block">
+            <img src="./icons/loading.gif"/>
+        </div>
     }
 
     var bg_image = get_weather_by_code(apiData.current_weather.weathercode);
