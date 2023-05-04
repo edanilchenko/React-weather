@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
-import WheatherIcon from "./WheatherIcon";
-import WheatherDesc from "./WheatherDesc";
+import WeatherIcon from "./WeatherIcon";
+import WeatherDesc from "./WeatherDesc";
 
 import { get_direction_by_degrees } from "../functions"
 
@@ -15,7 +15,7 @@ function Main({current_weather}){
         <section class="main">
             <div className="temperature-block">
                 <div className="icon">
-                    <WheatherIcon weathercode={current_weather.weathercode} />
+                    <WeatherIcon weathercode={current_weather.weathercode} />
                 </div>
                 <div className="value">
                     <span className="digit">
@@ -28,7 +28,7 @@ function Main({current_weather}){
                 </div>
             </div>
             <div className="description-block">
-                <WheatherDesc weathercode={current_weather.weathercode} />
+                <WeatherDesc weathercode={current_weather.weathercode} />
                 <div className="last-update">Updated at {update_time}</div>
             </div>
             <div className="details-block">

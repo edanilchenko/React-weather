@@ -10,7 +10,7 @@ import { get_weather_by_code } from "./functions.js"
 import { Parallax } from 'react-parallax';
 import City from "./components/City"
 
-function Wheather() {
+function Weather() {
     const [city, setCity] = useState({name: 'Dnipro', value: '48.47_35.04'});
     const [apiData, setApiData] = useState('');
     const [selectedDate, setDate] = useState('');
@@ -78,4 +78,4 @@ function Wheather() {
     );
 }
 
-export default Wheather;
+export default Weather;

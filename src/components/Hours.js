@@ -1,6 +1,6 @@
 import React from "react"
-import WheatherDesc from "./WheatherDesc";
-import WheatherIcon from "./WheatherIcon";
+import WeatherDesc from "./WeatherDesc";
+import WeatherIcon from "./WeatherIcon";
 
 import AliceCarousel from 'react-alice-carousel';
 import * as responsive from '../responsive.json';
@@ -23,13 +23,13 @@ function Hours({hourly, selected_date}) {
                         <div class="item">
                             <div class="content">
                                 <div class="icon">
-                                    <WheatherIcon weathercode={hourly.weathercode[e.i]} />
+                                    <WeatherIcon weathercode={hourly.weathercode[e.i]} />
                                 </div>
                                 <div class="temperature">
                                     {Math.round(hourly.temperature_2m[e.i])}°
                                 </div>
                                 <div class="description">
-                                    <WheatherDesc weathercode={hourly.weathercode[e.i]} />
+                                    <WeatherDesc weathercode={hourly.weathercode[e.i]} />
                                 </div>
                             </div>
                             <div class="time">

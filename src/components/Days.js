@@ -1,6 +1,6 @@
 import React, {useState} from "react"
-import WheatherDesc from "./WheatherDesc";
-import WheatherIcon from "./WheatherIcon";
+import WeatherDesc from "./WeatherDesc";
+import WeatherIcon from "./WeatherIcon";
 
 import AliceCarousel from 'react-alice-carousel';
 import * as responsive from '../responsive.json';
@@ -21,7 +21,7 @@ function Days({daily, selected_date, set_date = f => f}) {
                         <div className={(selected_date === e) ? 'item selected' : 'item' } key={i} onClick={ () => { set_date(e) } } >
                             <div class="day">{dateFormat(new Date(e), 'ddd d')}</div>
                             <div class="icon">
-                                <WheatherIcon weathercode={daily.weathercode[i]} />
+                                <WeatherIcon weathercode={daily.weathercode[i]} />
                             </div>
                             <div class="temperature">
                                 <span class="max">
@@ -32,7 +32,7 @@ function Days({daily, selected_date, set_date = f => f}) {
                                 </span>
                             </div>
                             <div class="description">
-                                <WheatherDesc weathercode={daily.weathercode[i]} />
+                                <WeatherDesc weathercode={daily.weathercode[i]} />
                             </div>
                         </div>
                     ))}
